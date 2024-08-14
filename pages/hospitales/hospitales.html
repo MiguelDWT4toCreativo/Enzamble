@@ -8,7 +8,9 @@
         content="muebles para hoteles, muebles para oficinas, muebles para hospitales, mobiliario. sillas, hoteles, hospitales, sillas ejecutivas, madera, enchapados.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/stylesh.css">
     <link rel="stylesheet" href="../../css/styles.css">
+
     <script src="../../js/head.js"></script>
     <link rel="shortcut icon" href="../../img/inicio-favicon.ico" />
     <title>Enzamble | Hospitales</title>
@@ -77,7 +79,7 @@
         <h1>Hospitales</h1>
         <p>Descubre nuestro portafolio de proyectos en hospitales</p>
         <p>Tu salud es nuestra prioridad</p>
-        <a href="../proyectos.html" class="btn btn-custom">Regresar a Proyectos</a>
+        <a href="../proyectos.html" class="btn cst">Regresar a Proyectos</a>
     </div>
 </div>
 </section>
@@ -94,25 +96,28 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active" style="background-image: url('../../img/hospitales/hospital.jpg');">
-            <a href="../hospitales/hospital_emiliano_zapata.html"> 
+            <a href="../hospitales/hospital_emiliano_zapata.html" style="display:block; height:100%;">
             <div class="carousel-caption">
                 <h5>Hospital Emiliano Zapata</h5>
                 <p>Ubicado en el corazón de la ciudad, el Hospital San Vital se dedica a proporcionar atención médica de calidad con un enfoque centrado en el paciente.</p>
             </div>
+            </a>
         </div>
         <div class="carousel-item" style="background-image: url('../../img/hospitales/hospital.jpg');">
-            <a href="../hospitales/hospital_salvatierra.html"></a>
+            <a href="../hospitales/hospital_salvatierra.html" style="display:block; height:100%;">
             <div class="carousel-caption">
                 <h5>Hospital Salvatierra</h5>
                 <p>Nuestro equipo de urgencias está disponible las 24 horas del día para atender cualquier emergencia médica con rapidez y eficacia..</p>
             </div>
+            </a>
         </div>
         <div class="carousel-item" style="background-image: url('../../img/hospitales/hospital.jpg');">
-            <a href="../hospitales/hospital_zacatecas.html"></a>
+            <a href="../hospitales/hospital_zacatecas.html" style="display:block; height:100%;">
             <div class="carousel-caption">
                 <h5>Hospital Zacatecas</h5>
                 <p>Contamos con un equipo de profesionales altamente capacitados y tecnología de vanguardia para ofrecer servicios médicos excepcionales.</p>
             </div>
+            </a>
         </div>
     </div>
     <a class="carousel-control-prev" href="#hospitalCarousel" role="button" data-slide="prev">
@@ -127,22 +132,18 @@
 </div>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2024 Enzamblé Diseño & Mobiliario. Todos los derechos reservados.</p>
-        <p>
-            <a href="#">Proyectos</a> |
-            <a href="#">Servicios</a> |
-            <a href="#">Tecnología</a> |
-            <a href="#">Catálogos</a> |
-            <a href="#">Nosotros</a> |
-            <a href="#">Contacto</a>
-        </p>
-    </div>
-</footer>
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+        });
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
 
+</body>
 </html>
